@@ -3,39 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.0.0"></script>
+    <style type="text/tailwindcss">
+        @theme {
+        --color-clifford: #da373d; 
+      }
+    </style> <!-- Brand Colors -->
     <title>Kannon's Home Funitures & Decor</title>
 </head>
-<body>
 
+<body>
     <header>
-        <img src="assets/images/Logo.png" alt="Kannon's Home Funitures & Decor Logo" width="200">
-        <!-- search bar -->
-         <nav>
-            <ul>
+        <div class="flex items-center justify-between px-4">
+            
+            <!-- Logo -->
+            <img src="assets/images/Logo.png" alt="Kannon's Home Funitures & Decor Logo" class="w-32">
+        
+            <!-- Search Bar -->                
+            <input type="text" placeholder="Search" class="w-40 px-2 border rounded">
+            
+            <!-- Navigation -->
+            <ul class="flex gap-4 items-center ml-4 flex-wrap">
                 <li><a href="Home.html">Home</a></li>
                 <li><a href="Product.html">Products</a></li>
                 <li><a href="About.html">About</a></li>
                 <li><a href="Contact.html">Contact</a></li>
             </ul>
-         </nav>
+        </div>
     </header>
 
-        <section>
-         <img src="assets/images/Hero.png" alt="Kannon's Home Funitures & Decor Hero Image" width="100%">
-        <h1>Why this business is special</h1>
-        <p>Kannon's Home Funitures & Decor is a family-owned business that has been serving the community for over 20 years. We specialize in creating beautiful and functional home furnishings and decor that bring joy and comfort to every home.</p>
+    <main>
+        <!-- Hero Section -->
+        <section class="py-8 relative h-[500px]">
+            <img 
+                src="assets/images/Hero.png" 
+                alt="Kannon's Home Funitures & Decor Hero Image"
+                class="w-full h-full object-cover">
+            <div class="absolute bottom-8 left-8 p-4">
+                <h1 class="text-3xl">Welcome to Kannon's Home Funitures & Decor</h1>
+                <p class="mt-1 text-lg">Brands that you can count on!</p>
+            </div>
         </section>
 
-    <footer>
-        <address>
-            Kannon's Home Funitures & Decor<br>
-            1227 Arlington Street<br>
-            Olive Branch, MS 38654<br>
-            Phone: (123) 456-7890<br>
-            Email: info@kannons.com<br>
-        </address>
+        <!-- Story Section -->
+        <section class="py-8 px-4 max-w-3xl mx-auto">
+            <h2 class="text-2xl">Our Story</h2>
+            <p class="mt-2">Founded in Olive Branch, Mississippi, Kannon’s Home Furnitures & Decor has been crafting beautiful, durable furniture since 1987. What started as a small family workshop has grown into a trusted destination for homeowners seeking quality furniture and stylish décor.
+                At Kannon’s, we believe a home should be comfortable, welcoming, and full of personality. Every piece in our collection reflects our commitment to craftsmanship, attention to detail, and timeless design—from cozy living rooms to elegant dining spaces.
+                Now run by the second generation of the Kannon family, we continue to combine classic techniques with modern trends, helping families turn their houses into homes they love.</p>
+        </section>
+
+        <!-- Featured Products & Promos Section -->
+        <section class="py-8">
+        <h2 class="text-2xl text-center">More Coming Soon</h2>
+        </section>
+    </main>
+
+    <footer class="py-6 px-4 max-w-3xl mx-auto">
         <p>&copy; 2026 Kannon's Home Funitures & Decor.</p>
     </footer>
 
 </body>
 </html>
+
+<!-- Styling and fix typos while maintaining the structure and content of the HTML document
+     Day 2: Connect Tailwind-->

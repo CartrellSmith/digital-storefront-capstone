@@ -3,21 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+     <style type="text/tailwindcss">
+        @theme {
+        --color-clifford: #da373d; 
+      }
+    </style> <!-- add brand colors -->
     <title>Kannon's Home Funitures & Decor</title>
 </head>
 <body>
 
     <header>
-        <img src="assets/images/Logo.png" alt="Kannon's Home Funitures & Decor Logo" width="200">
-        <!-- search bar -->
-         <nav>
-            <ul>
+        <div class="flex items-center justify-between px-4">
+            
+            <!-- Logo -->
+            <img src="assets/images/Logo.png" alt="Kannon's Home Funitures & Decor Logo" class="w-32">
+        
+            <!-- Search Bar -->                
+            <input type="text" placeholder="Search" class="w-40 px-2 border rounded">
+            
+            <!-- Navigation -->
+            <ul class="flex gap-4 items-center ml-4 flex-wrap">
                 <li><a href="Home.html">Home</a></li>
                 <li><a href="Product.html">Products</a></li>
                 <li><a href="About.html">About</a></li>
                 <li><a href="Contact.html">Contact</a></li>
             </ul>
-         </nav>
+        </div>
     </header>
 
     <section>
@@ -30,6 +42,9 @@
             <legend>Contact Information</legend>
             <label for="name">Name:</label><br>
             <input type="text" id="name" name="name"><br><br>
+
+            <label for="phone">Phone Number:</label><br>
+            <input type="text" id="phone" name="phone"><br><br>
 
             <label for="email">Email:</label><br>
             <input type="email" id="email" name="email"><br><br>
@@ -53,14 +68,7 @@
         </fieldset>
     </form>
 
-    <footer>
-        <address>
-            Kannon's Home Funitures & Decor<br>
-            1227 Arlington Street<br>
-            Olive Branch, MS 38654<br>
-            Phone: (123) 456-7890<br>
-            Email: info@kannons.com<br>
-        </address>
+    <footer class="py-6 px-4 max-w-3xl mx-auto">
         <p>&copy; 2026 Kannon's Home Funitures & Decor.</p>
     </footer>
 
