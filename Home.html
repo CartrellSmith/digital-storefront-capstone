@@ -9,58 +9,91 @@
         --color-clifford: #da373d; 
       }
     </style> <!-- Brand Colors -->
-    <title>Kannon's Home Funitures & Decor</title>
+    <title>Kannon's Home Furniture & Decor</title>
 </head>
 
-<body>
+<body class="bg-[#CAD5E3] text-black/80 font-sans leading-relaxed">
+
     <header>
         <div class="flex items-center justify-between px-4">
             
             <!-- Logo -->
-            <img src="assets/images/Logo.png" alt="Kannon's Home Funitures & Decor Logo" class="w-32">
+            <img src="assets/images/Logo_3.png" alt="Kannon's Home Furniture & Decor Logo" class="w-32 hover:scale-105 hover:drop-shadow-xl 
+            transition-all duration-300">
         
             <!-- Search Bar -->                
             <input type="text" placeholder="Search" class="w-40 px-2 border rounded">
             
             <!-- Navigation -->
             <ul class="flex gap-4 items-center ml-4 flex-wrap">
-                <li><a href="Home.html">Home</a></li>
-                <li><a href="Product.html">Products</a></li>
-                <li><a href="About.html">About</a></li>
-                <li><a href="Contact.html">Contact</a></li>
+                <li><a href="Home.html" class="text-white font-semibold tracking-wide relative
+         after:content-[''] after:absolute after:left-0 after:bottom-0 
+         after:w-0 after:h-[2px] after:bg-white 
+         after:transition-all after:duration-300
+         hover:after:w-full">
+Home</a></li>
+                <li><a href="Product.html" class="text-white font-semibold tracking-wide relative
+         after:content-[''] after:absolute after:left-0 after:bottom-0 
+         after:w-0 after:h-[2px] after:bg-white 
+         after:transition-all after:duration-300
+         hover:after:w-full">Products</a></li>
+                <li><a href="About.html" class="text-white font-semibold tracking-wide relative
+         after:content-[''] after:absolute after:left-0 after:bottom-0 
+         after:w-0 after:h-[2px] after:bg-white 
+         after:transition-all after:duration-300
+         hover:after:w-full">
+About</a></li>
+                <li><a href="Contact.html" class="text-white font-semibold tracking-wide relative
+         after:content-[''] after:absolute after:left-0 after:bottom-0 
+         after:w-0 after:h-[2px] after:bg-white 
+         after:transition-all after:duration-300
+         hover:after:w-full">
+Contact</a></li>
             </ul>
         </div>
     </header>
 
     <main>
         <!-- Hero Section -->
-        <section class="py-8 relative h-[500px]">
+        <section class="bg-[#ADC4DD] py-8 relative h-[500px] rounded-lg shadow-md">
             <img 
                 src="assets/images/Hero.png" 
-                alt="Kannon's Home Funitures & Decor Hero Image"
+                alt="Kannon's Home Furniture & Decor Hero Image"
                 class="w-full h-full object-cover">
-            <div class="absolute bottom-8 left-8 p-4">
-                <h1 class="text-3xl">Welcome to Kannon's Home Funitures & Decor</h1>
-                <p class="mt-1 text-lg">Brands that you can count on!</p>
+            <div class="absolute bottom-10 left-8
+                        bg-white/30 backdrop-blur-xs
+                        p-4 rounded-lg max-w-md">
+                <h1 class="text-white font-bold text-4xl mb-6 tracking-wide uppercase font-serif ">Welcome to Kannon's Home Furniture & Decor</h1>
+                <p class="hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-white/90">“Transform Your Home With Premium Furniture & Decor”</p>
             </div>
         </section>
 
         <!-- Story Section -->
-        <section class="py-8 px-4 max-w-3xl mx-auto">
-            <h2 class="text-2xl">Our Story</h2>
-            <p class="mt-2">Founded in Olive Branch, Mississippi, Kannon’s Home Furnitures & Decor has been crafting beautiful, durable furniture since 1987. What started as a small family workshop has grown into a trusted destination for homeowners seeking quality furniture and stylish décor.
+        <section class="bg-[#ADC4DD] py-8 px-4 max-w-3xl mx-auto rounded-lg shadow-md">
+            <h2 class="text-2xl font-semibold tracking-wide text-white">Our Story</h2>
+            <p class="mb-6 text-white/90 leading-relaxed font-serif">Founded in Olive Branch, Mississippi, Kannon’s Home Furnitures & Decor has been crafting beautiful, durable furniture since 1987. What started as a small family workshop has grown into a trusted destination for homeowners seeking quality furniture and stylish décor.
                 At Kannon’s, we believe a home should be comfortable, welcoming, and full of personality. Every piece in our collection reflects our commitment to craftsmanship, attention to detail, and timeless design—from cozy living rooms to elegant dining spaces.
                 Now run by the second generation of the Kannon family, we continue to combine classic techniques with modern trends, helping families turn their houses into homes they love.</p>
         </section>
 
-        <!-- Featured Products & Promos Section -->
-        <section class="py-8">
-        <h2 class="text-2xl text-center">More Coming Soon</h2>
+        <!-- Events Section -->
+        <section class="bg-[#ADC4DD] py-8">
+        <h2 class="text-2xl text-center font-semibold tracking-wide text-white">Events Coming Soon</h2>
+       
+        <div class="bg-[#ADC4D] p-6 rounded-lg shadow-lg 
+            hover:bg-[#9BB8C8] hover:shadow-xl transition-all duration-300">
+            <button class=" text-center bg-white text-black px-6 py-2 rounded-lg shadow-md 
+               font-semibold tracking-wide
+               hover:bg-black hover:text-white transition-all duration-300 inline-block">
+                Learn More
+            </button>
+
+    
         </section>
     </main>
 
     <footer class="py-6 px-4 max-w-3xl mx-auto">
-        <p>&copy; 2026 Kannon's Home Funitures & Decor.</p>
+        <p>&copy; 2026 Kannon's Home Furniture & Decor.</p>
     </footer>
 
 </body>
