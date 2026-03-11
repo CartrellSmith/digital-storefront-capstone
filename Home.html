@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.0.0"></script>
+    <!-- Brand Colors -->
     <style type="text/tailwindcss">
         @theme {
-        --color-clifford: #da373d; 
+        --color-clifford: #cad5e3 #ADC4DD black; 
       }
-    </style> <!-- Brand Colors -->
+    </style>
     <title>Kannon's Home Furniture & Decor</title>
 </head>
 
@@ -16,88 +18,221 @@
 
     <header>
         <div class="flex items-center justify-between px-4">
-            
+
             <!-- Logo -->
             <img src="assets/images/Logo_3.png" alt="Kannon's Home Furniture & Decor Logo" class="w-32 hover:scale-105 hover:drop-shadow-xl 
             transition-all duration-300">
-        
-            <!-- Search Bar -->                
-            <input type="text" placeholder="Search" class="w-40 px-2 border rounded">
-            
+
+            <!-- Search Bar -->
+            <input type="text" placeholder="Search" class="w-40 px-2 border rounded border-black">
+
             <!-- Navigation -->
-            <ul class="flex gap-4 items-center ml-4 flex-wrap">
-                <li><a href="Home.html" class="text-white font-semibold tracking-wide relative
+            <nav>
+                <ul class="flex gap-4 items-center ml-4 flex-wrap">
+                    <li><a href="Home.html" class="text-black font-semibold tracking-wide relative
          after:content-[''] after:absolute after:left-0 after:bottom-0 
-         after:w-0 after:h-[2px] after:bg-white 
+         after:w-0 after:h-[2px] after:bg-black 
          after:transition-all after:duration-300
          hover:after:w-full">
-Home</a></li>
-                <li><a href="Product.html" class="text-white font-semibold tracking-wide relative
+                            Home</a></li>
+                    <li><a href="Product.html" class="text-black font-semibold tracking-wide relative
          after:content-[''] after:absolute after:left-0 after:bottom-0 
-         after:w-0 after:h-[2px] after:bg-white 
+         after:w-0 after:h-[2px] after:bg-black 
          after:transition-all after:duration-300
          hover:after:w-full">Products</a></li>
-                <li><a href="About.html" class="text-white font-semibold tracking-wide relative
+                    <li><a href="About.html" class="text-black font-semibold tracking-wide relative
          after:content-[''] after:absolute after:left-0 after:bottom-0 
-         after:w-0 after:h-[2px] after:bg-white 
+         after:w-0 after:h-[2px] after:bg-black 
          after:transition-all after:duration-300
          hover:after:w-full">
-About</a></li>
-                <li><a href="Contact.html" class="text-white font-semibold tracking-wide relative
+                            About</a></li>
+                    <li><a href="Contact.html" class="text-black font-semibold tracking-wide relative
          after:content-[''] after:absolute after:left-0 after:bottom-0 
-         after:w-0 after:h-[2px] after:bg-white 
+         after:w-0 after:h-[2px] after:bg-black 
          after:transition-all after:duration-300
          hover:after:w-full">
-Contact</a></li>
-            </ul>
+                            Contact</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
     <main>
         <!-- Hero Section -->
         <section class="bg-[#ADC4DD] py-8 relative h-[500px] rounded-lg shadow-md">
-            <img 
-                src="assets/images/Hero.png" 
-                alt="Kannon's Home Furniture & Decor Hero Image"
+            <img src="assets/images/Hero.png" alt="Kannon's Home Furniture & Decor Hero Image"
                 class="w-full h-full object-cover">
             <div class="absolute bottom-10 left-8
-                        bg-white/30 backdrop-blur-xs
+                        bg-white/30 backdrop-blur-sm
                         p-4 rounded-lg max-w-md">
-                <h1 class="text-white font-bold text-4xl mb-6 tracking-wide uppercase font-serif ">Welcome to Kannon's Home Furniture & Decor</h1>
-                <p class="hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-white/90">“Transform Your Home With Premium Furniture & Decor”</p>
+                <h1 class="text-white font-bold text-4xl mb-6 tracking-wide uppercase font-serif ">Welcome to Kannon's
+                    Home Furniture & Decor</h1>
+                <p class="text-white hover:shadow-xl hover:-translate-y-1 transition-all duration-300">“Transform
+                    Your Home With Premium Furniture & Decor”</p>
             </div>
+        </section>
+
+        <!-- Shop Now Section -->
+        <section class="py-16 max-w-5xl mx-auto text-center">
+
+            <!-- Heading -->
+            <h2 class="text-3xl font-bold tracking-wide mb-4">
+                Shop Now
+            </h2>
+
+            <!-- Subheading -->
+            <p class="text-black/70 mb-10 max-w-xl mx-auto">
+                Discover premium furniture and décor to elevate every room in your home.
+            </p>
+
+            <!-- CTA Button -->
+            <a href="Product.html" class="bg-black text-white px-10 py-3 rounded-lg shadow-lg font-semibold tracking-wide
+                    hover:bg-black hover:text-black hover:shadow-xl hover:-translate-y-1
+                    transition-all duration-300 inline-block">
+                Browse Products
+            </a>
+
+        </section>
+
+        <!-- Featured Section -->
+        <section class="py-16 max-w-6xl mx-auto">
+
+            <!-- Section Heading -->
+            <h2 class="text-3xl font-bold tracking-wide text-center mb-4">
+                Featured Items
+            </h2>
+
+            <p class="text-black/70 text-center mb-12 max-w-xl mx-auto">
+                Explore some of our most popular furniture and décor pieces.
+            </p>
+
+            <!-- Featured Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+
+                <!-- Featured Item 1 -->
+                <div class="bg-white/90 p-6 rounded-lg shadow-md 
+                    hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                    <img src="assets/images/modern sofa.jpg" alt="Featured Product 1"
+                        class="rounded-lg mb-4 w-full h-48 object-cover hover:scale-105 transition duration-300">
+                    <h3 class="text-xl font-bold mb-2">Modern Sofa</h3>
+                    <p class="text-black/70 mb-4">Comfort meets style for any living room.</p>
+                    <div class="flex items-center gap-1 mb-3">
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                    </div>
+                    <a href="Product.html" class="bg-black text-white px-6 py-2 rounded-lg shadow-md font-semibold tracking-wide
+                      hover:bg-white hover:text-black transition-all duration-300 inline-block">
+                        Shop Now
+                    </a>
+                </div>
+
+                <!-- Featured Item 2 -->
+                <div class="bg-white/90 p-6 rounded-lg shadow-md 
+                    hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                    <img src="assets/images/Wooden dining set.jpg" alt="Featured Product 2"
+                        class="rounded-lg mb-4 w-full h-48 object-cover hover:scale-105 transition duration-300">
+                    <h3 class="text-xl font-bold mb-2">Wooden Dining Set</h3>
+                    <p class="text-black/70 mb-4">Perfect for family dinners and gatherings.</p>
+                    <div class="flex items-center gap-1 mb-3">
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                    </div>
+                    <a href="products.html" class="bg-black text-white px-6 py-2 rounded-lg shadow-md font-semibold tracking-wide
+                      hover:bg-white hover:text-black transition-all duration-300 inline-block">
+                        Shop Now
+                    </a>
+                </div>
+
+                <!-- Featured Item 3 -->
+                <div class="bg-white/90 p-6 rounded-lg shadow-md 
+                    hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                    <img src="assets/images/lighting.jpg" alt="Featured Product 3"
+                        class="rounded-lg mb-4 w-full h-48 object-cover hover:scale-105 transition duration-300">
+                    <h3 class="text-xl font-bold mb-2">Decorative Lighting</h3>
+                    <p class="text-black/70 mb-4">Brighten your home with elegant lighting.</p>
+                    <div class="flex items-center gap-1 mb-3">
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                    </div>
+                    <a href="products.html" class="bg-black text-white px-6 py-2 rounded-lg shadow-md font-semibold tracking-wide
+                      hover:bg-white hover:text-black transition-all duration-300 inline-block">
+                        Shop Now
+                    </a>
+                </div>
+
+            </div>
+
         </section>
 
         <!-- Story Section -->
         <section class="bg-[#ADC4DD] py-8 px-4 max-w-3xl mx-auto rounded-lg shadow-md">
-            <h2 class="text-2xl font-semibold tracking-wide text-white">Our Story</h2>
-            <p class="mb-6 text-white/90 leading-relaxed font-serif">Founded in Olive Branch, Mississippi, Kannon’s Home Furnitures & Decor has been crafting beautiful, durable furniture since 1987. What started as a small family workshop has grown into a trusted destination for homeowners seeking quality furniture and stylish décor.
-                At Kannon’s, we believe a home should be comfortable, welcoming, and full of personality. Every piece in our collection reflects our commitment to craftsmanship, attention to detail, and timeless design—from cozy living rooms to elegant dining spaces.
-                Now run by the second generation of the Kannon family, we continue to combine classic techniques with modern trends, helping families turn their houses into homes they love.</p>
+            <h2 class="text-2xl font-semibold tracking-wide">Our Story</h2>
+            <p class="mb-6 leading-relaxed font-serif">Founded in Olive Branch, Mississippi, Kannon’s Home
+                Furnitures & Decor has been crafting beautiful, durable furniture since 1987. What started as a small
+                family workshop has grown into a trusted destination for homeowners seeking quality furniture and
+                stylish décor.
+                At Kannon’s, we believe a home should be comfortable, welcoming, and full of personality. Every piece in
+                our collection reflects our commitment to craftsmanship, attention to detail, and timeless design—from
+                cozy living rooms to elegant dining spaces.
+                Now run by the second generation of the Kannon family, we continue to combine classic techniques with
+                modern trends, helping families turn their houses into homes they love.</p>
         </section>
 
-        <!-- Events Section -->
-        <section class="bg-[#ADC4DD] py-8">
-        <h2 class="text-2xl text-center font-semibold tracking-wide text-white">Events Coming Soon</h2>
-       
-        <div class="bg-[#ADC4D] p-6 rounded-lg shadow-lg 
-            hover:bg-[#9BB8C8] hover:shadow-xl transition-all duration-300">
-            <button class=" text-center bg-white text-black px-6 py-2 rounded-lg shadow-md 
-               font-semibold tracking-wide
-               hover:bg-black hover:text-white transition-all duration-300 inline-block">
-                Learn More
-            </button>
-
-    
-        </section>
     </main>
 
     <footer class="py-6 px-4 max-w-3xl mx-auto">
+        <!-- Newsletter Signup-->
+        <div class="max-w-md mx-auto mb-8 text-center">
+            <h3 class="text-xl font-bold tracking-wide mb-3">Join Our Newsletter</h3>
+            <p class="mb-4">
+                Get updates on new arrivals, events, and exclusive offers.
+            </p>
+
+            <form class="flex flex-col sm:flex-row items-center gap-3">
+                <input type="email" placeholder="Enter your email" class="w-full p-3 rounded-lg border border-black-300 
+                        focus:outline-none focus:ring-2 focus:ring-black/40
+                        hover:border-black transition-all duration-300">
+
+                <button type="submit" class="bg-black text-white px-6 py-3 rounded-lg shadow-md font-semibold tracking-wide
+                        hover:bg-white hover:text-black hover:shadow-xl hover:-translate-y-1
+                        transition-all duration-300">
+                    Subscribe
+                </button>
+            </form>
+        </div>
+
+        <div class="flex gap-4 justify-center mb-4">
+            <!-- Youtube Link -->
+            <a href="https://youtube.com" target="_blank" class="text-white hover:text-black transition duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="w-6 h-6">
+                    <!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                    <path
+                        d="M549.7 124.1C543.5 100.4 524.9 81.8 501.4 75.5 458.9 64 288.1 64 288.1 64S117.3 64 74.7 75.5C51.2 81.8 32.7 100.4 26.4 124.1 15 167 15 256.4 15 256.4s0 89.4 11.4 132.3c6.3 23.6 24.8 41.5 48.3 47.8 42.6 11.5 213.4 11.5 213.4 11.5s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zM232.2 337.6l0-162.4 142.7 81.2-142.7 81.2z" />
+                </svg>
+            </a>
+
+            <!-- Facebook Link -->
+            <a href="https://facebook.com" target="_blank" class="text-white hover:text-black transition duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-6 h-6">
+                    <!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                    <path
+                        d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5l0-170.3-52.8 0 0-78.2 52.8 0 0-33.7c0-87.1 39.4-127.5 125-127.5 16.2 0 44.2 3.2 55.7 6.4l0 70.8c-6-.6-16.5-1-29.6-1-42 0-58.2 15.9-58.2 57.2l0 27.8 83.6 0-14.4 78.2-69.3 0 0 175.9C413.8 494.8 512 386.9 512 256z" />
+                </svg>
+            </a>
+        </div>
+        <!-- Copy Right Notice -->
         <p>&copy; 2026 Kannon's Home Furniture & Decor.</p>
     </footer>
 
 </body>
-</html>
 
-<!-- Styling and fix typos while maintaining the structure and content of the HTML document
-     Day 2: Connect Tailwind-->
+</html>
