@@ -21,11 +21,12 @@ A modern, responsive furniture store website created as a class project.
 
 #### Pages Included
 
-- **home.html** – Main landing page with hero section and featured products  
+- **index.html** – Main landing page with hero section and featured products  
 - **product.html** – Full product listings with Add to Cart buttons  
 - **about.html** – Information about the brand and mission  
 - **contact.html** – Contact form for customer inquiries  
-- **privacy.html** – Privacy Policy page (opens in a new tab)  
+- **privacy.html** – Privacy Policy page (opens in a new tab)
+- **product-detail.html** - Full product information with Related Items Product  
 
 ##### Technologies Used
 
