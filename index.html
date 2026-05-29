@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.0.0"></script>
+    <link href="styles.css" rel="stylesheet">
     <style type="text/tailwindcss"></style>
     <title>Kannon's Home Furniture & Decor</title>
 </head>
@@ -49,19 +50,47 @@
                             Contact</a></li>
                 </ul>
             </nav>
+            <!--Shopping Cart-->
+                <div class="relative">
+                    <a href="cart.html" class="text-2xl">
+                        🛒
+                    </a>
+
+                    <span id="cart-count" class="absolute -top-2 -right-2 bg-red-600 text-white text-xs font-bold 
+                 w-5 h-5 flex items-center justify-center rounded-full">
+                        0
+                    </span>
+                </div>
         </div>
     </header>
 
     <main>
         <!-- Hero Section -->
-        <section class="bg-[url(assets/images/Hero.png)] bg-cover bg-bottom bg-fixed py-8 relative h-[450px] md:h-[700px] flex items-center" alt="Kannon's Home Furniture & Decor Hero Image">
+        <section class="relative md:h-[450px] flex items-center">
+            <div class="relative w-full h-100 overflow-hidden" id="slideshow">
+                <div class="slide absolute inset-0">
+                    <img src="assets/images/slide1.jpg" class="w-full h-full object-cover">
+                </div>
+
+                <div class="slide absolute inset-0">
+                    <img src="assets/images/slide2.jpg" class="w-full h-full object-cover">
+                </div>
+
+                <div class="slide absolute inset-0">
+                    <img src="assets/images/slide3.jpg" class="w-full h-full object-cover">
+                </div>
+            </div>
+
             <div class="absolute bottom-10 left-6
                         bg-white/40 backdrop-blur-xl
                         p-6 rounded-lg shadow-lg max-w-md
                         border border-white/40">
-                <h1 class="text-black text-center font-bold text-2xl mb-6 tracking-wide uppercase font-serif ">Welcome to Kannon's
+                <h1 class="text-black text-center font-bold text-2xl mb-6 tracking-wide uppercase font-serif ">Welcome
+                    to Kannon's
                     Home Furniture & Decor</h1>
-                <p class="text-black text-sm text-center hover:shadow-xl hover:-translate-y-1 transition-all duration-300">“Transform
+                <p
+                    class="text-black text-sm text-center hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                    “Transform
                     Your Home With Premium Furniture & Decor”</p>
             </div>
         </section>
@@ -85,7 +114,7 @@
                     transition-all duration-300 inline-block">
                 Browse Products
             </a>
-            
+
         </section>
 
         <!-- Featured Section -->
@@ -224,12 +253,14 @@
             </a>
         </div>
         <!-- Privacy Policy -->
-        <a href="privacy.html" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white">Privacy Policy</a>
+        <a href="privacy.html" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white">Privacy
+            Policy</a>
 
         <!-- Copy Right Notice -->
         <p>&copy; 2026 Kannon's Home Furniture & Decor.</p>
     </footer>
-
+    <script src="js/slideshow.js"></script>
+    <script src="js/cart.js"></script>
 </body>
 
 </html>
