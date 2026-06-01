@@ -19,8 +19,15 @@
             transition-all duration-300"></a>
 
             <!-- Search Bar -->
-            <input type="text" placeholder="Search" class="border-black w-40 px-2 border rounded">
+            <input 
+                id="search-bar" 
+                type="text" 
+                placeholder="Search" 
+                class="w-40 px-2 border rounded border-black" 
+            />
+            <div id="search-results" class="bg-white shadow-md rounded mt-2 hidden"></div>
 
+            
             <!-- Navigation -->
             <ul class="flex gap-4 items-center ml-4 flex-wrap">
                 <li><a href="index.html" class="font-semibold tracking-wide relative
@@ -163,7 +170,10 @@
         <!-- Copy Right Notice -->
         <p>&copy; 2026 Kannon's Home Furniture & Decor.</p>
     </footer>
-<script src="js/cart.js"></script>
+    <script src="js/slideshow.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/search.js"></script>
 </body>
 
 </html>
