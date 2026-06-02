@@ -6,3 +6,49 @@
 .slide.active {
   opacity: 1;
 }
+
+/* Product Card Container */
+.product-card {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Lift on hover */
+.product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* Image styling */
+.product-card img {
+    transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
+}
+
+/* Blur + dim image on hover */
+.product-card:hover img {
+    transform: scale(1.05);
+    filter: blur(3px);
+    opacity: 0.4;
+}
+
+/* Quick View Button */
+.quick-view-btn {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: white;
+}
+
+/* Show button on hover */
+.product-card:hover .quick-view-btn {
+    opacity: 1;
+    pointer-events: auto;
+}

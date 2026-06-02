@@ -12,8 +12,10 @@ if (product) {
     container.innerHTML = `
         <div class="bg-white p-6 rounded shadow">
             <img src="${product.image}" class="w-full h-64 object-cover rounded mb-4">
+
             <h1 class="text-3xl font-bold mb-2">${product.name}</h1>
-            <p class="text-lg text-gray-700 mb-4">Product ID: ${product.id}</p>
+
+            <p class="text-xl font-semibold text-gray-900 mb-2">$${product.price}</p>
 
             <button 
                 onclick="addToCartFromDetails(${product.id})"
