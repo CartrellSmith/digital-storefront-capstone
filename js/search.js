@@ -4,16 +4,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!input || !resultsBox) return;
 
-    // Accessibility attributes for search box
-    input.setAttribute("role", "searchbox");
-    input.setAttribute("aria-label", "Search products");
-    input.setAttribute("aria-controls", "search-results");
-    input.setAttribute("aria-expanded", "false");
+    resultsBox.addEventListener("mousedown", (e) => {
+        e.preventDefault(); // Prevents blur so arrow keys keep working
+    });
 
-    // Accessibility for results container
-    resultsBox.setAttribute("role", "listbox");
-    resultsBox.setAttribute("aria-live", "polite");
-    resultsBox.setAttribute("aria-label", "Search results");
+    let activeIndex = -1;
 
     input.addEventListener("input", () => {
         const value = input.value.toLowerCase().trim();
@@ -21,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (value === "") {
             resultsBox.classList.add("hidden");
             resultsBox.innerHTML = "";
-            input.setAttribute("aria-expanded", "false");
+            activeIndex = -1;
             return;
         }
 
@@ -31,12 +26,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (matches.length === 0) {
             resultsBox.innerHTML = `
-                <p class="p-3 text-gray-500" role="alert">
-                    No results found
-                </p>
+                <p class="p-3 text-gray-500" role="alert">No results found</p>
             `;
             resultsBox.classList.remove("hidden");
-            input.setAttribute("aria-expanded", "true");
+            activeIndex = -1;
             return;
         }
 
@@ -44,15 +37,12 @@ document.addEventListener("DOMContentLoaded", () => {
             <a 
                 href="${p.url}" 
                 role="option"
-                aria-label="View product ${p.name}"
-                class="flex items-center gap-3 p-3 hover:bg-gray-100 cursor-pointer"
+                class="search-item flex items-center gap-3 p-3 cursor-pointer
+                    hover:bg-gray-100 focus:bg-gray-200 focus:outline-none"
             >
                 <img 
                     src="${p.image}" 
                     alt="${p.name}" 
-                    role="img"
-                    loading="lazy"
-                    decoding="async"
                     class="w-12 h-12 object-cover rounded"
                 >
                 <span>${p.name}</span>
@@ -60,7 +50,36 @@ document.addEventListener("DOMContentLoaded", () => {
         `).join("");
 
         resultsBox.classList.remove("hidden");
-        input.setAttribute("aria-expanded", "true");
+        activeIndex = -1;
     });
-});
 
+    // ⭐ ARROW KEY NAVIGATION
+    input.addEventListener("keydown", (e) => {
+    const items = resultsBox.querySelectorAll(".search-item");
+    if (!items.length) return;
+
+    // helper: clear previous highlight
+    const clearActive = () => {
+        items.forEach(item => item.classList.remove("bg-gray-200"));
+    };
+
+    if (e.key === "ArrowDown") {
+        e.preventDefault(); // stop page scroll
+        activeIndex = (activeIndex + 1) % items.length;
+        clearActive();
+        items[activeIndex].classList.add("bg-gray-200"); // highlight only
+    }
+
+    if (e.key === "ArrowUp") {
+        e.preventDefault(); // stop page scroll
+        activeIndex = (activeIndex - 1 + items.length) % items.length;
+        clearActive();
+        items[activeIndex].classList.add("bg-gray-200");
+    }
+
+    if (e.key === "Enter" && activeIndex >= 0) {
+        e.preventDefault();
+        items[activeIndex].click(); // open selected product
+    }
+});
+});

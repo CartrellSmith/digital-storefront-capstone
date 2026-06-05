@@ -94,6 +94,15 @@ if (isDetailsPage) {
         wrapper.appendChild(btn);
 
         container.appendChild(wrapper);
+
+        btn.setAttribute("tabindex", "0");
+
+        btn.addEventListener("keydown", (e) => {
+            if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                addToCartFromDetails(product.id);
+            }
+        });
     }
 
     // Run only on product-details.html

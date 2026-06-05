@@ -109,41 +109,63 @@ function renderProducts() {
         card.className = "product-card bg-white rounded shadow p-4 flex flex-col";
         card.setAttribute("role", "group");
         card.setAttribute("aria-label", `${product.name} product card`);
+        card.setAttribute("tabindex", "0");
+
+        /* IMAGE WRAPPER */
+        const imgWrapper = document.createElement("div");
+        imgWrapper.className = "product-img-wrapper";
 
         const img = document.createElement("img");
         img.src = product.image;
         img.alt = product.name;
-        img.className = "w-full h-48 object-cover rounded mb-3";
-        img.setAttribute("role", "img");
-        img.setAttribute("loading", "lazy");
-        img.setAttribute("decoding", "async");
+        img.className = "product-img";
         img.onerror = () => handleImageError(img);
+
+        const quickBtn = document.createElement("button");
+        quickBtn.textContent = "Quick View";
+        quickBtn.className = "quick-view-btn";
+        quickBtn.addEventListener("click", () => openQuickView(product.id));
+
+        imgWrapper.appendChild(img);
+        imgWrapper.appendChild(quickBtn);
+
+        /* PRODUCT INFO */
+        const info = document.createElement("div");
+        info.className = "product-info mt-3"; // name + price only
+
+        const actions = document.createElement("div");
+        actions.className = "product-actions mt-2"; // add to cart stays visible
 
         const name = document.createElement("h2");
         name.textContent = product.name;
-        name.className = "text-xl font-semibold mb-2";
+        name.className = "text-xl font-semibold mb-1";
 
         const price = document.createElement("p");
         price.textContent = `$${product.price}`;
         price.className = "text-lg font-bold mb-3";
 
-        const quickBtn = document.createElement("button");
-        quickBtn.textContent = "Quick View";
-        quickBtn.className = "bg-gray-900 text-white py-2 rounded mb-2 hover:bg-gray-700";
-        quickBtn.setAttribute("aria-label", `Open quick view for ${product.name}`);
-        quickBtn.addEventListener("click", () => openQuickView(product.id));
-
         const cartBtn = document.createElement("button");
         cartBtn.textContent = "Add to Cart";
-        cartBtn.className = "bg-black text-white py-2 rounded hover:bg-gray-800";
-        cartBtn.setAttribute("aria-label", `Add ${product.name} to cart`);
+        cartBtn.className = "bg-black text-white py-2 rounded hover:bg-gray-800 w-full";
         cartBtn.addEventListener("click", () => addToCartFromDetails(product.id));
 
-        card.appendChild(img);
-        card.appendChild(name);
-        card.appendChild(price);
-        card.appendChild(quickBtn);
-        card.appendChild(cartBtn);
+        info.appendChild(name);
+        info.appendChild(price);
+
+        actions.appendChild(cartBtn);
+
+        /* BUILD CARD */
+        card.appendChild(imgWrapper);
+        card.appendChild(info);
+        card.appendChild(actions);
+        
+        /* KEYBOARD SUPPORT */
+        card.addEventListener("keydown", (e) => {
+            if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                openQuickView(product.id);
+            }
+        });
 
         grid.appendChild(card);
     });
@@ -174,4 +196,42 @@ document.addEventListener("DOMContentLoaded", () => {
         updateCartDisplay();
     }
 
+});
+
+document.addEventListener("keydown", (e) => {
+    const modal = document.getElementById("quick-view-modal");
+    if (modal.classList.contains("hidden")) return;
+
+    if (e.key === "Escape") {
+        closeQuickView();
+    }
+
+    // Trap focus inside modal
+    const focusable = modal.querySelectorAll("button, [tabindex='0'], img");
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+
+    if (e.key === "Tab") {
+        if (e.shiftKey && document.activeElement === first) {
+            e.preventDefault();
+            last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+            e.preventDefault();
+            first.focus();
+        }
+    }
+});
+
+menuBtn.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        menuBtn.click();
+    }
+});
+
+document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+        mobileMenu.classList.add("hidden");
+        menuBtn.setAttribute("aria-expanded", "false");
+    }
 });
