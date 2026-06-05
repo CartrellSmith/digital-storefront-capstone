@@ -8,31 +8,51 @@ A modern, responsive furniture store website created as a class project.
 
 ### Features
 
-- Responsive navigation bar
-- Hero section with call‑to‑action button
-- Featured Products section on the Home page
-- Full Product page with Add to Cart buttons
-- Contact page for customer inquiries
+- Responsive navigation bar with mobile menu
+
+- Hero section with call‑to‑action
+
+- Featured Products on the Home page
+
+- Full Product Listing page with dynamic product cards
+
+- Product Detail page with Quick View modal
+
+- Add to Cart functionality with cart badge updates
+
+- Contact page with form
+
 - Privacy Policy page (opens in a new tab)
-- Footer with navigation links
+
 - Consistent branding and custom logo
-- Responsive grid layout for product cards
+
+- Responsive grid layout using Tailwind CSS
+
 - Image assets included throughout the site
+
+- Accessible components (ARIA labels, keyboard navigation, focus states)
 
 #### Pages Included
 
-- **index.html** – Main landing page with hero section and featured products  
-- **product.html** – Full product listings with Add to Cart buttons  
-- **about.html** – Information about the brand and mission  
-- **contact.html** – Contact form for customer inquiries  
-- **privacy.html** – Privacy Policy page (opens in a new tab)
-- **product-detail.html** - Full product information with Related Items Product  
+- index.html — Main landing page with hero section + featured products
+
+- product.html — Full product catalog with Add to Cart + Quick View
+
+- product-detail.html — Individual product details with related items
+
+- about.html — Brand story and mission
+
+- contact.html — Customer inquiry form
+
+- privacy.html — Privacy Policy (opens in a new tab)
+ 
 
 ##### Technologies Used
 
 - **HTML5** – Structure and content of the website  
 - **Tailwind CSS** – Utility‑first styling for layout, spacing, and responsive design  
+- JavaScript (ES6) — Dynamic product rendering, Quick View modal, cart logic
 
 ###### Author
-
-**C. Smith**
+C. Smith
+Mississippi Coding Academy - Capstone Project
